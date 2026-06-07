@@ -237,12 +237,6 @@ The same loop — learn the fixed layout, react to the moving people — is what
 
 ---
 
-## Author
-
-**Satyam Kumar Tripathi** — B.Tech & M.Tech in CSE / Artificial Intelligence. Idea, implementation, and simulation.
-
-*Open for educational and research use.*
-
 <div align="center">
 
 **If this was a fun read or a useful reference, a star goes a long way.**

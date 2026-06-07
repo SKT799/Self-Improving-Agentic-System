@@ -22,21 +22,6 @@
   <rect width="1200" height="340" rx="18" fill="url(#bg)"/>
   <circle cx="1015" cy="90" r="230" fill="url(#glow)"/>
 
-  <!-- top-right motif: three robots routing to their goals, middle one detours past a brick -->
-  <g stroke-width="2.4" fill="none" stroke-linecap="round" stroke-dasharray="2 5">
-    <polyline points="905,52 1118,52" stroke="#5B8DEF"/>
-    <polyline points="905,92 988,92 988,72 1036,72 1036,92 1118,92" stroke="#FBA94C"/>
-    <polyline points="905,132 1118,132" stroke="#B96CF0"/>
-  </g>
-  <!-- brick the orange route bends around -->
-  <rect x="998" y="84" width="16" height="16" rx="2" fill="#5B4636" stroke="#7A5A40"/>
-  <!-- robots (start) and goals (end) -->
-  <g>
-    <circle cx="905" cy="52" r="5.5" fill="#5B8DEF"/><rect x="1114" y="46" width="12" height="12" rx="2" fill="#5B8DEF"/>
-    <circle cx="905" cy="92" r="5.5" fill="#FBA94C"/><rect x="1114" y="86" width="12" height="12" rx="2" fill="#FBA94C"/>
-    <circle cx="905" cy="132" r="5.5" fill="#B96CF0"/><rect x="1114" y="126" width="12" height="12" rx="2" fill="#B96CF0"/>
-  </g>
-
   <!-- title block -->
   <text x="64" y="104" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="46" font-weight="800" fill="url(#title)">Autonomous Multi-Robot Pathfinding</text>
   <text x="66" y="146" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="23" font-weight="600" fill="#C7D2FE">Reinforcement Learning &#183; Q-Learning &#183; Dynamic Obstacle Avoidance</text>
