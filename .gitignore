@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated plot output from Performance_test.py runs
+No_of_steps_to_reach_goal_vs_Training_episodes.png
+Cumulated_Reward_vs_Training_episodes.png

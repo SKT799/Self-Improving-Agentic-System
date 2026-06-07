@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="Autonomous Multi-Robot Pathfinding using Reinforcement Learning">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0F1C"/>
+      <stop offset="0.55" stop-color="#111A30"/>
+      <stop offset="1" stop-color="#1A1340"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5B8DEF"/>
+      <stop offset="0.5" stop-color="#FBA94C"/>
+      <stop offset="1" stop-color="#B96CF0"/>
+    </linearGradient>
+    <linearGradient id="s1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B6FE0"/><stop offset="1" stop-color="#2347B0"/></linearGradient>
+    <linearGradient id="s2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB454"/><stop offset="1" stop-color="#E08A1E"/></linearGradient>
+    <linearGradient id="s3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B96CF0"/><stop offset="1" stop-color="#8B2FD6"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6C8BFF" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#6C8BFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="340" rx="18" fill="url(#bg)"/>
+  <circle cx="1015" cy="90" r="230" fill="url(#glow)"/>
+
+  <!-- top-right motif: three robots routing to their goals, middle one detours past a brick -->
+  <g stroke-width="2.4" fill="none" stroke-linecap="round" stroke-dasharray="2 5">
+    <polyline points="905,52 1118,52" stroke="#5B8DEF"/>
+    <polyline points="905,92 988,92 988,72 1036,72 1036,92 1118,92" stroke="#FBA94C"/>
+    <polyline points="905,132 1118,132" stroke="#B96CF0"/>
+  </g>
+  <!-- brick the orange route bends around -->
+  <rect x="998" y="84" width="16" height="16" rx="2" fill="#5B4636" stroke="#7A5A40"/>
+  <!-- robots (start) and goals (end) -->
+  <g>
+    <circle cx="905" cy="52" r="5.5" fill="#5B8DEF"/><rect x="1114" y="46" width="12" height="12" rx="2" fill="#5B8DEF"/>
+    <circle cx="905" cy="92" r="5.5" fill="#FBA94C"/><rect x="1114" y="86" width="12" height="12" rx="2" fill="#FBA94C"/>
+    <circle cx="905" cy="132" r="5.5" fill="#B96CF0"/><rect x="1114" y="126" width="12" height="12" rx="2" fill="#B96CF0"/>
+  </g>
+
+  <!-- title block -->
+  <text x="64" y="104" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="46" font-weight="800" fill="url(#title)">Autonomous Multi-Robot Pathfinding</text>
+  <text x="66" y="146" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="23" font-weight="600" fill="#C7D2FE">Reinforcement Learning &#183; Q-Learning &#183; Dynamic Obstacle Avoidance</text>
+  <text x="66" y="178" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="400" fill="#7E8AB5">Three warehouse robots learn collision-free routes on a 25&#215;25 grid &#8212; past brick walls and around people who move.</text>
+
+  <!-- divider -->
+  <line x1="64" y1="206" x2="1136" y2="206" stroke="#26304F" stroke-width="1"/>
+
+  <!-- footer: train -> policy -> navigate -> goal, then a reward/params pill -->
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+    <!-- stage 1 -->
+    <rect x="64" y="238" width="158" height="64" rx="11" fill="url(#s1)"/>
+    <text x="143" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Q-Learning</text>
+    <text x="143" y="287" text-anchor="middle" font-size="10.5" fill="#DDE8FF">per-agent &#183; &#949;-greedy &#183; TD</text>
+
+    <line x1="222" y1="270" x2="252" y2="270" stroke="#6B76A0" stroke-width="2.2" stroke-dasharray="4 4"/><polygon points="260,270 250,265 250,275" fill="#6B76A0"/>
+
+    <!-- stage 2 -->
+    <rect x="264" y="238" width="150" height="64" rx="11" fill="url(#s2)"/>
+    <text x="339" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#3A2606">Greedy Policy</text>
+    <text x="339" y="287" text-anchor="middle" font-size="10.5" fill="#5A3D12">argmax&#8201;Q(s, a)</text>
+
+    <line x1="414" y1="270" x2="444" y2="270" stroke="#6B76A0" stroke-width="2.2" stroke-dasharray="4 4"/><polygon points="452,270 442,265 442,275" fill="#6B76A0"/>
+
+    <!-- stage 3 -->
+    <rect x="456" y="238" width="194" height="64" rx="11" fill="url(#s3)"/>
+    <text x="553" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Dynamic Avoidance</text>
+    <text x="553" y="287" text-anchor="middle" font-size="10.5" fill="#F0E2FF">sense &#183; sidestep &#183; pause</text>
+
+    <line x1="650" y1="270" x2="680" y2="270" stroke="#6B76A0" stroke-width="2.2" stroke-dasharray="4 4"/><polygon points="688,270 678,265 678,275" fill="#6B76A0"/>
+
+    <!-- goal -->
+    <rect x="692" y="238" width="80" height="64" rx="11" fill="#13283F" stroke="#1E5E46"/>
+    <text x="732" y="266" text-anchor="middle" font-size="15" font-weight="700" fill="#34D399">Goal</text>
+    <text x="732" y="287" text-anchor="middle" font-size="13" fill="#34D399">&#10003;</text>
+
+    <!-- reward / params pill -->
+    <rect x="792" y="238" width="344" height="64" rx="11" fill="#13213F" stroke="#33406B"/>
+    <text x="964" y="266" text-anchor="middle" font-size="13.5" font-weight="600" fill="#D6E0FF">+100 goal &#183; &#8722;100 wall &#183; &#8722;1 step</text>
+    <text x="964" y="288" text-anchor="middle" font-size="11.5" fill="#7E8AB5">&#945; = 0.3 &#183; &#947; = 0.9 &#183; &#949; = 0.5 &#183; 3 agents</text>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="18" fill="none" stroke="#2A335A" stroke-width="1"/>
+</svg>
