@@ -85,7 +85,7 @@ flowchart LR
 
 The learning signal is the **temporal-difference update** — every move nudges the table toward the reward seen plus the best the robot believes it can do from the next cell:
 
-$$Q(s, a) \leftarrow Q(s, a) + \alpha\\Big[ r + \gamma\,\max_{a'} Q(s', a') - Q(s, a)\,\Big]$$
+$$Q(s, a) \leftarrow Q(s, a) + \alpha\\Big[ r + \gamma\,\max_{a'} Q(s', a') - Q(s, a)\\Big]$$
 
 Moves are chosen **ε-greedy** — most of the time take the best known action, but with probability `ε` try something random, so the robot keeps discovering routes instead of locking onto the first one it finds. An episode runs from start to goal; the table is updated the whole way; after 10,000 episodes per robot, the Q-table collapses into a simple **greedy policy** — in each cell, just take the highest-valued move. The three robots are trained **sequentially**, each with its own table.
 
