@@ -12,7 +12,6 @@ No map handed down, no supervised data. Each robot runs its own **Q-Learning** b
 
 [![Watch Demo Video](https://img.shields.io/badge/Watch-Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](Project_Video_Final.mp4)
 &nbsp;
-[![View Source Code](https://img.shields.io/badge/View-Source_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SKT799/Autonomous-Multi-Robot-Pathfinding-using-Reinforcement-Learning)
 
 <br/>
 
