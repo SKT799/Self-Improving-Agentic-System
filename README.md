@@ -4,9 +4,9 @@
 
 <br/>
 
-### Three warehouse robots(agents), each taught from scratch by trial and error to find the shortest route to its shelf — then thread through a crowd of people who never stop moving making the environment stochastic.
+### In this project we have 3 agents. These three warehouse robots(agents), each taught from scratch by trial and error to find the shortest route to itself — then through the stochastic environment they reach their assigned goal. Randomness is what makes traditional DL non-useful here and RL comes here to save us.
 
-No map handed down, no supervised data. Each robot runs its own **Q-Learning** brain, learns the grid by bumping into walls and getting rewarded for reaching its goal, and avoids the unpredictable humans at run time with a lightweight sense-and-sidestep policy. In the environment agents learn where the obstacles are, where the goals are using reward & penality through TD-Learning.
+When we don't have any supervised data, we can use RL to learn from creating the data itself through exploration and exploitation. Each robot runs on its own **Q-Learning** table called 'experience', learns the grid by bumping into walls and getting rewarded for reaching its goal and avoids the unpredictable humans at run time with a lightweight sense-and-sidestep policy. In the environment agents learn where the obstacles are where the goals are using reward & penality through TD-Learning.
 
 <br/>
 
