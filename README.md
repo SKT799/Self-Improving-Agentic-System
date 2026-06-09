@@ -67,11 +67,11 @@ flowchart LR
 
     subgraph EP [One episode: start -> goal]
       direction TB
-      PICK{&#949;-greedy choice} -->|explore, prob &#949;| RND[random move]
-      PICK -->|exploit, prob 1-&#949;| BEST[argmax Q s,a]
+      PICK{#949;-greedy choice} -->|explore, prob #949;| RND[random move]
+      PICK -->|exploit, prob 1-#949;| BEST[argmax Q s,a]
       RND --> STEP[take_action -> next cell + reward]
       BEST --> STEP
-      STEP --> UPD[TD update<br/>Q += &#945; r + &#947; max Q' - Q]
+      STEP --> UPD[TD update<br/>Q += #945; r + #947; max Q' - Q]
       UPD --> PICK
     end
 
