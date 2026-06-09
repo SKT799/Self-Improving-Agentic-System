@@ -4,9 +4,9 @@
 
 <br/>
 
-### Three warehouse robots, each taught from scratch by trial and error to find the shortest route to its shelf — then thread through a crowd of people who never stop moving.
+### Three warehouse robots(agents), each taught from scratch by trial and error to find the shortest route to its shelf — then thread through a crowd of people who never stop moving making the environment stochastic.
 
-No map handed down, no supervised data. Each robot runs its own **Q-Learning** brain, learns the grid by bumping into walls and getting rewarded for reaching its goal, and avoids the unpredictable humans at run time with a lightweight sense-and-sidestep policy. The whole thing plays out live in a custom **pygame** warehouse.
+No map handed down, no supervised data. Each robot runs its own **Q-Learning** brain, learns the grid by bumping into walls and getting rewarded for reaching its goal, and avoids the unpredictable humans at run time with a lightweight sense-and-sidestep policy. In the environment agents learn where the obstacles are, where the goals are using reward & penality through TD-Learning.
 
 <br/>
 
@@ -29,12 +29,12 @@ No map handed down, no supervised data. Each robot runs its own **Q-Learning** b
 
 ## The problem I was solving
 
-Walk into an Amazon or Flipkart fulfilment centre and you'll see dozens of order-picking robots crossing the same floor at once — each headed somewhere different, none of them allowed to crash into a shelf, a person, or each other. That's the problem I wanted to model: **many robots, many goals, one shared and partly unpredictable space.**
+Walk into an Amazon or Flipkart fulfilment centre and you'll see dozens of order-picking robots crossing the same floor at once — each headed somewhere different, none of them allowed to crash into a shelf, a person or each other. That's the problem I wanted to model: **many agents, many goals, one shared and partly unpredictable space.**
 
-The honest difficulty isn't the static layout — walls don't move, and a robot can simply *learn* them. The difficulty is the people. A human can appear in any free cell and wander off in any direction, and there's no dataset that covers "what the floor looks like next." So I split the problem cleanly in two:
+The honest difficulty isn't the static layout — walls don't move and a robot can simply *learn* them. The difficulty is the people. A human can appear in any free cell and wander off in any direction and there's no dataset that covers "what the floor looks like next." So I split the problem cleanly in two:
 
-- **What's fixed, the robot learns.** Walls, the goal, the cost of a wasted step — all of that gets baked into a Q-table by trial and error.
-- **What's random, the robot reacts to.** The moving humans are handled *at run time* with a sense-and-sidestep rule, deliberately kept *out* of the learning so they don't poison it.
+- **What's fixed, the robot learns.** Whenever in-simulation robots collide with the walls they get penalized & that's how they learn.
+- **What's random, don't learn them because they are just noise signal.** The moving humans are handled *at run time* with a sense-and-sidestep rule, deliberately kept *out* of the learning so they don't poison it.
 
 ```
    random Q-table          after Q-Learning            at run time
