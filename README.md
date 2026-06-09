@@ -174,30 +174,6 @@ None of these three are surprising for a working RL system — and that's exactl
 
 ---
 
-## Two ways to run it
-
-Install the handful of dependencies first:
-
-```bash
-pip install pygame numpy matplotlib
-```
-
-**Train and watch the simulation** — the straightforward version:
-
-```bash
-python main__.py
-```
-
-It trains the three robots (with an on-screen progress bar), then drops them into the warehouse to route around the moving crowd to their goals.
-
-**The interactive control room** — [`Executable_File.py`](Executable_File.py):
-
-```bash
-python Executable_File.py
-```
-
-This one wraps the same engine in a live control panel — sliders for **episodes, ε, pause probability, human count, and FPS**, buttons to **Start/Train & Run, Reset, and Export CSV**, keyboard shortcuts (`S` / `R` / `E`), and a **scenario** toggle that cycles three warehouse presets: *Warehouse Picking*, *Sortation Hub*, and *Last-Mile Dock*. Change a knob, rerun, and watch the behaviour shift in real time.
-
 **Reproduce the plots** — [`Performance_test.py`](Performance_test.py) runs the parameter sweeps above and writes the PNGs.
 
 ---
@@ -231,7 +207,7 @@ I'd rather name the rough edges than hide them:
 
 ## Real-world shape of the problem
 
-The same loop — learn the fixed layout, react to the moving people — is what sits under warehouse pickers (Amazon-style), airport and hospital delivery bots, and hotel service robots. This project is a clean, watchable model of that core idea.
+The same loop — learn the fixed layout, react to the moving people — is what sits under warehouse pickers (Amazon-style), airport and hospital delivery bots and hotel service robots. This project is a clean, watchable model of that core idea.
 
 ---
 
