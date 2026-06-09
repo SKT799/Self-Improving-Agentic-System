@@ -46,12 +46,12 @@ The honest difficulty isn't the static layout — walls don't move, and a robot 
 
 ## What you're looking at
 
-A `25 × 25` grid warehouse, rendered in pygame and driven by three independent robots:
+A `25 × 25(Can change)` grid warehouse, rendered in pygame and driven by three independent robots:
 
-- **3 robots**, starting from three corners, each with its own colour (blue, orange, purple) and its own assigned goal shelf.
-- **Static obstacles** — the brick walls. Fixed, and learned.
-- **70 moving humans** — spawned on random free cells, taking a random walk every tick. They dodge walls and goals but will happily walk into a robot; it's the robot's job never to let that happen.
-- **Drawn paths** — each robot trails a coloured line so you can watch the route it actually took, detours and all.
+- **3 robots**, starting from three corners(can start from any positions), each with its own colour (blue, orange, purple assigned) and its own assigned goal shelf.
+- **Static obstacles** — the brick walls. Fixed and learned during exploration.
+- **70 moving humans(can change)** — spawned on random free cells, taking a random walk every tick. They dodge walls and goals but will happily walk into a robot; it's the robot's job never to let that happen.
+- **Drawn paths** — each robot trails a coloured line so that we can inspect and see how they are approaching.
 
 The full run is captured in [`Project_Video_Final.mp4`](Project_Video_Final.mp4) in this repo.
 
@@ -59,7 +59,7 @@ The full run is captured in [`Project_Video_Final.mp4`](Project_Video_Final.mp4)
 
 ## How a robot learns its route
 
-No labels, no demonstrations. Reinforcement learning is the right tool exactly *because* there's no data to imitate — the robot is dropped into the grid and learns from the consequences of its own moves. Each robot keeps a **Q-table**: for every cell, a value for each of the four moves (up, down, left, right). It starts as all zeros and gets sharpened, one episode at a time.
+Reinforcement learning is the right tool exactly *because* there's no data to imitate — the robot is dropped into the grid and learns from the consequences of its own moves. Each robot keeps a **Q-table**: for every cell, a value for each of the four moves (up, down, left, right), We derive policy from the table. It starts as all zeros and gets sharpened, one episode at a time.
 
 ```mermaid
 flowchart LR
