@@ -22,7 +22,6 @@ No map handed down, no supervised data. Each robot runs its own **Q-Learning** b
 ![Algorithm](https://img.shields.io/badge/RL-Q--Learning-FBA94C?style=flat-square)
 ![Agents](https://img.shields.io/badge/Multi--Agent-3_robots-B96CF0?style=flat-square)
 ![Grid](https://img.shields.io/badge/World-25%C3%9725_grid-3B6FE0?style=flat-square)
-![License](https://img.shields.io/badge/License-Educational-blue?style=flat-square)
 
 </div>
 
