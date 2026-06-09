@@ -21,7 +21,7 @@ When we don't have any supervised data, we can use RL to learn from creating the
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-plots-11557C?style=flat-square)
 ![Algorithm](https://img.shields.io/badge/RL-Q--Learning-FBA94C?style=flat-square)
 ![Agents](https://img.shields.io/badge/Multi--Agent-3_robots-B96CF0?style=flat-square)
-![Grid](https://img.shields.io/badge/World-25%C3%9725_grid-3B6FE0?style=flat-square)
+![Grid](https://img.shields.io/badge/World-25%C3%9725(can_change)_grid-3B6FE0?style=flat-square)
 
 </div>
 
