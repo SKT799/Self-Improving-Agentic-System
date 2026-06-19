@@ -207,7 +207,7 @@ I'd rather name the rough edges than hide them:
 
 ## Real-world shape of the problem
 
-The same loop — learn the fixed layout, react to the moving people — is what sits under warehouse pickers (Amazon-style), airport and hospital delivery bots and hotel service robots. This project is a clean, watchable model of that core idea.
+The same idea with more complex modeling is what sits under warehouse pickers (Amazon-style), airport and hospital delivery bots and hotel service robots. This project is a clean & representation of core idea what this algo can do.
 
 ---
 
