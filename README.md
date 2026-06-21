@@ -10,10 +10,11 @@ When we don't have any supervised data, we can use RL to learn from creating the
 
 <br/>
 
-[![Watch Demo Video](https://img.shields.io/badge/Watch-Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](Project_Video_Final.mp4)
+[![Watch Demo Video](https://img.shields.io/badge/Watch-Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/x0QCzsvAkkA)
 &nbsp;
 
 <br/>
+
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)
 ![pygame](https://img.shields.io/badge/pygame-2D_Sim-2EA043?style=flat-square)
